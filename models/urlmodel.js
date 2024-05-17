@@ -21,10 +21,14 @@ const urlSchema = new mongoose.Schema({
             required: false
         }
     }],
-    customUrl: [{
-        url: String,
-        code: String
-    }]
+    customUrl: [
+        [
+            {
+                url: String,
+                code: String
+            }
+        ]
+    ]
 });
 
 

@@ -9,8 +9,14 @@ export const checkOriginalLink = (link) => {
 };
 
 export const generateShortUrl = (length) => {
+    let size
+    if (length) {
+        size = length
+    } else {
+        size = 8
+    }
     const code = generateUrl({
-        length: length,
+        length: size,
         uppercase: true,
     });
 
