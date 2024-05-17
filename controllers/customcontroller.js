@@ -4,7 +4,7 @@ import Url from '../models/urlmodel.js'
 
 export const custom15url = async (req, res) => {
     // CHECKING JWT 
-    const token = req.cookies.token;
+    const token = req.headers.authorization
     if (!token) {
         return res.status(401).json({ success: false, message: "Unauthorized. No token provided" });
     }
@@ -44,7 +44,7 @@ export const custom15url = async (req, res) => {
 
 export const get15url = async (req, res) => {
     // CHECKING JWT
-    const token = req.cookies.token;
+    const token = req.headers.authorization
     if (!token) {
         return res.status(401).json({ success: false, message: "Unauthorized. No token provided" });
     }
@@ -77,7 +77,7 @@ export const get15url = async (req, res) => {
 
 export const delete15 = async (req, res) => {
     // CHECKING JWT
-    const token = req.cookies.token;
+    const token = req.headers.authorization
     if (!token) {
         return res.status(401).json({ success: false, message: "Unauthorized. No token provided" });
     }
@@ -126,7 +126,7 @@ export const delete15 = async (req, res) => {
 
 export const delete1 = async (req, res) => {
     // CHECKING JWT
-    const token = req.cookies.token;
+    const token = req.headers.authorization
     if (!token) {
         return res.status(401).json({ success: false, message: "Unauthorized. No token provided" });
     }
