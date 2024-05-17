@@ -118,7 +118,7 @@ export const fetchAllUrlsByUserGet = async (req, res) => {
 
 export const redirectByUrlCodeGet = async (req, res) => {
     // CHECKING JWT
-    const token = req.headers.authorization
+    const token = req.query.token;
     if (!token) {
         return res
             .status(401)
